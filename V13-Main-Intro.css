@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --colorBlueDark: #0065fc;
+  --colorGrayLight: #f2f2f2;
+  --colorBlueLight: #deebff;
+}
+
+body {
+  font-family: "Raleway", Times New Roman, Times, serif;
+  /*font-size: small;*/
+  margin: 0;
+  padding: 0;
+  background: magenta; /* aide visuelle */
+  border: red solid; /*av*/
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+div#containerPage {
+  background: khaki; /*av*/
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr 5fr 6fr 5fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "accommodation aside"
+    "activity activity"
+    "footer footer";
+}
+/* Block 1- <Header> - Desktop format */
+header {
+  grid-area: header;
+}
+
+header#topNav {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr 1fr;
+  grid-template-areas: "logo vide nav1 nav2";
+  background: white; /*av*/
+}
+
+/*#logo {
+  grid-area: logo;
+}*/
+
+#nav1 {
+  /* grid-area: nav1;*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*#nav2 {
+  grid-area: nav2;
+}*/
+
+figure {
+  margin: 0;
+}
+
+header ul {
+  padding-left: 0;
+  text-align: center;
+}
+
+nav :hover {
+  border-top: solid #0065fc;
+  color: #0065fc;
+}
+
+nav div :hover {
+  border-top: none;
+}
+/* End block 1- <Header> - Desktop format */
+
+/* Block 2- <Main reseach> It is divided into 4 sections - Desktop format */
+main {
+  grid-area: main;
+  background: yellowgreen; /* av */
+}
+
+/* 1st section : Introduction of the reseach zone */
+div #titleMain {
+  background:white; /* av */
+  display: flex;
+}
+
+#titleMain h1:first-child {
+  margin-right: 7px;
+}
+
+#titleMain h1 {
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+/* 2nd section : Research bar */
+#main .form input[type="text"] {
+  height: 30px;
+  width: 140px;
+}
+
+#main .form input[placeholder="  Marseille, France"] {
+  font-weight: bold;
+}
+
+#main .form a {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--colorBlue);
+  color: var(--colorFond);
+  padding: 10px;
+  transition: 400ms;
+}
+
+#main .form a:hover {
+  color: var(--colorFond);
+  box-shadow: 0px 5px 10px var(--colorBlue);
+  transition: 400ms;
+}
+
+#main .form .iconSearch {
+  display: none;
+}
+/* End block 2 - <Main reseach> - Desktop format */
+
+/* Block inline 3.1 - <Section Accommodation> - Desktop format */
+section#accommodation {
+  grid-area: accommodation;
+}
+/* End block inline 3.1 - <Section Accommodation> - Desktop format */
+
+/* Block inline 3.2 - <Aside The Most popular> - Desktop format */
+aside {
+  grid-area: aside;
+}
+/* End block inline 3.2 - <Aside The Most popular> - Desktop format */
+
+/* Block 4 - <Section Activity> - Desktop format */
+section#activity {
+  grid-area: activity;
+}
+/* End block 4 - <Section Activity> - Desktop format */
+
+/* Block 5 - <Footer> - Desktop format */
+footer {
+  grid-area: footer;
+}
+/* End block 5 - <Footer> - Desktop format */
+/*  End Desktop format */
+
+/*  Tablet  format */
+/* Block 1- <Header> - Tablet format */
+/* End block 1- <Header> - Tablet format */
+
+/* Block 2 - <Main reseach> - Tablet format */
+/* End block 2 - <Main reseach> - Tablet format */
+
+/* Block 3.1 - <Section Accommodation> - Tablet format */
+/* End block 3.1 - <Section Accommodation> - Tablet format */
+
+/* Block 3.2 - <Aside The Most popular> - Tablet format */
+/* End block 3.2 - <Aside The Most popular> - Tablet format */
+
+/* Block 4 - <Section Activity> - Tablet format */
+/* End block 4 - <Section Activity> - Tablet format */
+
+/* Block 5 - <Footer> - Tablet format */
+/* End block 5 - <Footer> - Tablet format */
+/*  End Tablet  format */
+
+/*  Mobile format */
+@media screen and (max-width: 619px) {
+  div#containerPage {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header "
+      "main "
+      "aside"
+      "accommodation"
+      "activity"
+      "footer";
+  }
+
+  /* Block 1- <Header> - Mobile format */
+  Header#topNav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #vide {
+    flex-grow: 1;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    border-bottom: solid #f2f2f2;
+  }
+
+  nav :hover {
+    border-top: none;
+    border-bottom: solid #0065fc;
+  }
+
+  nav div :hover {
+    border-bottom: none;
+  }
+
+  /* End block 1- <Header> - Mobile format */
+
+  /* Block 2 - <Main reseach> It is divided into 4 sections - Mobile format */
+  main {
+    padding-top: 10px;
+  }
+  /* 1st section : Introduction of the reseach zone */
+  div #titleMain {
+    display: grid;
+  }
+
+  #titleMain h1:first-child {
+    margin-bottom: 0px;
+  }
+
+  #titleMain h1:last-child {
+    margin-top: 0px;
+  }
+
+  /*
+  main p {
+    font-size: 17px;
+  }*/
+
+  /* 2nd section : Research bar */
+
+  /* End block 2 - <Main reseach> - Mobile format */
+
+  /* Block 3.1 - <Section Accommodation> - Mobile format */
+  /* End block 3.1 - <Section Accommodation> - Mobile format */
+
+  /* Block 3.2 - <Aside The Most popular> - Mobile format */
+  /* End block 3.2 - <Aside The Most popular> - Mobile format */
+
+  /* Block 4 - <Section Activity> - Mobile format */
+  /* End block 4 - <Section Activity> - Mobile format */
+
+  /* Block 5 - <Footer> - Mobile format */
+  /* End block 5 - <Footer> - Mobile format */
+}
+/*  End Mobile format */
+/* End */
