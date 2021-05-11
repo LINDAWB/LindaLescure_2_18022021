@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --colorBlueDark: #0065fc;
+  --colorGrayLight: #f2f2f2;
+  --colorBlueLight: #deebff;
+}
+
+body {
+  font-family: "Raleway", Times New Roman, Times, serif;
+  /*font-size: small;*/
+  margin: 0;
+  padding: 0;
+  background: magenta; /* aide visuelle */
+  border: red solid; /*av*/
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+div#containerPage {
+  background: khaki; /*av*/
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr 5fr 6fr 5fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "accommodation aside"
+    "activity activity"
+    "footer footer";
+}
+/* Block 1- <Header> - Desktop format */
+header {
+  grid-area: header;
+  border: green solid; /* av */
+}
+
+header#topNav {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr 1fr;
+  grid-template-areas: "logo vide nav1 nav2";
+  background: white; /*av*/
+}
+
+/*#logo {
+  grid-area: logo;
+}*/
+
+#nav1 {
+  /* grid-area: nav1;*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*#nav2 {
+  grid-area: nav2;
+}*/
+
+figure {
+  margin: 0;
+}
+
+header ul {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+nav :hover {
+  border-top: solid var(--colorBlueDark);
+  color: var(--colorBlueDark);
+}
+
+nav div :hover {
+  border-top: none;
+}
+/* End block 1- <Header> - Desktop format */
+
+/* Block 2- <Main reseach> It is divided into 4 sections - Desktop format */
+main {
+  grid-area: main;
+  background: yellowgreen; /* av */
+}
+
+/* Main 1st section : Introduction of the reseach zone */
+Main section {
+  background: white; /* av */
+}
+
+section#introMain {
+  border: yellow solid; /* av */
+}
+
+/*div #titleMain {
+  display: flex;
+}
+
+#titleMain h1:first-child {
+  margin-right: 7px;
+}
+
+#titleMain h1 {
+  margin-top: 14px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}*/
+
+main p {
+  margin-top: 0px;
+}
+
+/* Main 2nd section : Research bar */
+form {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+form label {
+  background: var(--colorGrayLight);
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+label i {
+  font-size: 20px;
+  text-align: center;
+  width: 50px;
+  padding-top: 15px;
+}
+
+form input {
+  border: var(--colorGrayLight) solid;
+  height: 84%;
+  width: 225px;
+}
+
+form input {
+  font-weight: bolder;
+}
+
+form .buttonSearch {
+  height: 70%;
+  background-color: var(--colorBlueDark);
+  color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+form .iconSearch {
+  display: none;
+}
+
+form a:hover {
+  color: #000;
+}
+
+/* Main 3rd section : Filters*/
+section#filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  column-gap: 25px;
+  font-weight: bolder;
+}
+
+#filters p {
+  padding-top: 17px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.filterButton {
+  border-radius: 50px;
+  border: solid var(--colorGrayLight);
+  max-height: 50px;
+}
+
+div.filterButton:hover {
+  background-color: var(--colorBlueDark);
+}
+
+button.iconFilter {
+  color: var(--colorBlueDark);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 19px;
+  text-align: center;
+  background-color: var(--colorGrayLight);
+  border: none;
+  max-height: 50px;
+}
+
+button.filterLabel {
+  border: none;
+  max-height: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+}
+
+.filterLabel a:hover {
+  color: #fff;
+}
+
+/* Main 4th section : Search result - number of homes found */
+#infoResult div {
+  width: 23px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
+  color: var(--colorBlueDark);
+  border: solid var(--colorGrayLight);
+  margin-right: 10px;
+}
+
+section#infoResult {
+  display: flex;
+}
+
+#infoResult p {
+  padding-top: 5px;
+}
+
+/* End block 2 - <Main reseach> - Desktop format */
+
+/* Block inline 3.1 - <Section Accommodation> - Desktop format */
+section#accommodation {
+  grid-area: accommodation;
+}
+/* End block inline 3.1 - <Section Accommodation> - Desktop format */
+
+/* Block inline 3.2 - <Aside The Most popular> - Desktop format */
+aside {
+  grid-area: aside;
+}
+/* End block inline 3.2 - <Aside The Most popular> - Desktop format */
+
+/* Block 4 - <Section Activity> - Desktop format */
+section#activity {
+  grid-area: activity;
+}
+/* End block 4 - <Section Activity> - Desktop format */
+
+/* Block 5 - <Footer> - Desktop format */
+footer {
+  grid-area: footer;
+}
+/* End block 5 - <Footer> - Desktop format */
+/*  End Desktop format */
+
+/*  Tablet Big size format */
+/* Block 1- <Header> - Tablet Big size format */
+/* End block 1- <Header> - Tablet Big size format */
+
+/* Block 2 - <Main reseach> - Tablet Big size format */
+/*@media screen and (min-width: 522px) and (max-width: 1050px)*/
+@media screen and (min-width: 747px) and (max-width: 1050px) {
+  Header#topNav {
+    background: green;
+  }
+
+  div.filterButton:last-child {
+    margin: auto;
+  }
+
+  /*div.filterButton {
+    background: blue;
+    margin: auto;
+  }
+
+  section#filters {
+    column-gap: auto;
+  }*/
+
+  /* End block 2 - <Main reseach> - Tablet Big size format */
+
+  /* Block 3.1 - <Section Accommodation> - Tablet Big size format */
+  /* End block 3.1 - <Section Accommodation> - Tablet Big size format */
+
+  /* Block 3.2 - <Aside The Most popular> - Tablet Big size format */
+  /* End block 3.2 - <Aside The Most popular> - Tablet Big size format */
+
+  /* Block 4 - <Section Activity> - Tablet Big size format */
+  /* End block 4 - <Section Activity> - Tablet Big size format */
+
+  /* Block 5 - <Footer> - Tablet Big size format */
+  /* End block 5 - <Footer> - Tablet Big size format */
+}
+/*  End Tablet Big size format */
+
+/*  Tablet Little size format */
+/* Block 1- <Header> - Tablet Little size format */
+/* End block 1- <Header> - Tablet Little size format */
+
+/* Block 2 - <Main reseach> - Tablet Little size format */
+@media screen and (min-width: 520px) and (max-width: 746px) {
+  Header#topNav {
+    background: grey;
+  }
+}
+/*@media screen and (min-width: 415px) and (max-width: 521px) {
+
+
+}*/
+
+/* button.filterLabel {
+    font-size: 17px;
+      }
+
+  div.filterButton {
+    background: blue;
+    margin: auto;
+  }
+
+ div.filterButton:nth-last-child(2) {
+    background: blue;
+    margin: auto;
+  }
+
+  div.filterButton:last-child {
+    background: red;
+    margin: auto;*/
+
+/* End block 2 - <Main reseach> - Tablet Little size format */
+
+/* Block 3.1 - <Section Accommodation> - Tablet Little size format */
+/* End block 3.1 - <Section Accommodation> - Tablet Little size format */
+
+/* Block 3.2 - <Aside The Most popular> - Tablet Little size format */
+/* End block 3.2 - <Aside The Most popular> - Tablet Little size format */
+
+/* Block 4 - <Section Activity> - Tablet Little size format */
+/* End block 4 - <Section Activity> - Tablet Little size format */
+
+/* Block 5 - <Footer> - Tablet Little size format */
+/* End block 5 - <Footer> - Tablet Little size format */
+/*  End Tablet Little size format */
+
+/*  Mobile format */
+/*@media screen and (max-width: 521px) {*/
+@media screen and (max-width: 519px) {
+  div#containerPage {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header "
+      "main "
+      "aside"
+      "accommodation"
+      "activity"
+      "footer";
+  }
+
+  /* Block 1- <Header> - Mobile format */
+
+  Header#topNav {
+    display: flex;
+    flex-wrap: wrap;
+    background: red; /* av */
+  }
+
+  #vide {
+    flex-grow: 1;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    border-bottom: solid var(--colorGrayLight);
+  }
+
+  nav :hover {
+    border-top: none;
+    border-bottom: solid var(--colorBlueDark);
+  }
+
+  nav div :hover {
+    border-bottom: none;
+  }
+
+  /* End block 1- <Header> - Mobile format */
+
+  /* Block 2 - <Main reseach> It is divided into 4 sections - Mobile format */
+  main {
+    padding-top: 10px;
+  }
+  /* 1st section : Introduction of the reseach zone - Mobile format */
+  /*div #titleMain {
+    display: grid;
+  }
+
+  #titleMain h1:first-child {
+    margin-bottom: 0px;
+  }
+
+  #titleMain h1:last-child {
+    margin-top: 0px;
+  }*/
+
+  /*
+  main p {
+    font-size: 17px;
+  }*/
+
+  /* 2nd section : Research bar - Mobile format */
+  form .buttonSearch {
+    display: none;
+  }
+
+  form .iconSearch {
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    width: 50px;
+    height: 33px;
+    padding-top: 17px;
+    background-color: var(--colorBlueDark);
+    color: #fff;
+    border: solid var(--colorBlueDark);
+  }
+
+  form {
+    border: solid var(--colorGrayLight);
+    border-radius: 10px;
+    border-right: none;
+    max-width: 330px;
+    margin: auto;
+  }
+
+  form input {
+    border: none;
+  }
+
+  /* Main 3rd sections : Filters - Mobile format */
+
+  #filters p {
+    width: 100%;
+  }
+
+  button.filterLabel {
+    padding-right: 13px;
+    padding-left: 13px;
+    font-size: 16px;
+  }
+
+  section#filters {
+    column-gap: 10px;
+  }
+
+  /* End block 2 - <Main reseach> - Mobile format */
+
+  /* Block 3.1 - <Section Accommodation> - Mobile format */
+  /* End block 3.1 - <Section Accommodation> - Mobile format */
+
+  /* Block 3.2 - <Aside The Most popular> - Mobile format */
+  /* End block 3.2 - <Aside The Most popular> - Mobile format */
+
+  /* Block 4 - <Section Activity> - Mobile format */
+  /* End block 4 - <Section Activity> - Mobile format */
+
+  /* Block 5 - <Footer> - Mobile format */
+  /* End block 5 - <Footer> - Mobile format */
+}
+/*  End Mobile format */
+/* End */
