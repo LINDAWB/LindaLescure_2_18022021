@@ -45,10 +45,6 @@ div#containerPage {
 /* Block 1- <Header> - Desktop Big format */
 header {
   grid-area: header;
-}
-
-header#topNav {
-  grid-area: header;
   display: grid;
   grid-template-columns: repeat(2, 1fr) 2fr 1fr;
   grid-template-areas: "logo vide nav signUp";
@@ -588,7 +584,7 @@ footer a:hover {
   }
 
   /* Block 1 - <Header> - Mobile format */
-  Header#topNav {
+  Header {
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
