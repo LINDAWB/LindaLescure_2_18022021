@@ -93,6 +93,11 @@ div#signUp {
   grid-area: signUp;
 }
 
+div#signUp a {
+  color: var(--colorBlueDark);
+  font-weight: bold;
+}
+
 div#signUp a:hover {
   text-decoration: underline;
 }
